@@ -1,0 +1,7 @@
+curl -X POST "http://localhost:8080/convert?type=csv-to-xlsx" -H "Content-Type: multipart/form-data" -F "file=@input.csv" >> response2.xlsx
+
+
+curl -X POST "http://localhost:8080/convert?type=xlsx-to-csv" -H "Content-Type: multipart/form-data" -F "file=@response.xlsx" >> response.csv
+
+
+curl -X POST "http://localhost:8080/convert?type=csv-to-json" -H "Content-Type: multipart/form-data" -F "file=@response.csv" >> response.json
